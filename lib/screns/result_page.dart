@@ -4,6 +4,15 @@ import 'package:bmiui/constants.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
+  ResultPage(
+      {required this.bmiResult,
+      required this.recommendation,
+      required this.resultText});
+
+  final String bmiResult;
+  final String resultText;
+  final String recommendation;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,17 +39,17 @@ class ResultPage extends StatelessWidget {
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
+                children: [
                   Text(
-                    "Nomal",
+                    resultText.toUpperCase(),
                     style: kResultTextStyle,
                   ),
                   Text(
-                    "35",
+                    bmiResult,
                     style: kBMITextStyle,
                   ),
                   Text(
-                    "Your body BMI is quite low, you should eat more!",
+                    recommendation,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   ),
