@@ -214,7 +214,7 @@ class _InputPageState extends State<InputPage> {
                   builder: (context) => ResultPage(
                     recommendation: calc.getRecommendation(),
                     resultText: calc.getResult(),
-                    bmiResult: calc.getBMI(),
+                    bmiResult: calc.getBMI().toStringAsFixed(1),
                   ),
                 ),
               );

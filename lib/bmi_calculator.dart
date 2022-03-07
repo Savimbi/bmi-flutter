@@ -1,15 +1,17 @@
 import 'dart:math';
 
 class BMICalculator {
-  BMICalculator({required this.weight, required this.height});
+  BMICalculator({required this.weight, required this.height}) {
+    _bmi == getBMI();
+  }
+
   final int height;
   final int weight;
+  late final double _bmi;
 
-  double _bmi = 0.0;
-
-  String getBMI() {
-    _bmi = weight / pow(height / 100, 2);
-    return _bmi.toStringAsFixed(1);
+  double getBMI() {
+    double bmi = weight / pow(height / 100, 2);
+    return bmi;
   }
 
   String getResult() {

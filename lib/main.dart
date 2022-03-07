@@ -1,3 +1,4 @@
+import 'package:bmiui/screns/sign_up.dart';
 import 'package:flutter/material.dart';
 
 import 'screns/input_page.dart';
@@ -13,7 +14,7 @@ class BMICalculator extends StatelessWidget {
         primaryColor: const Color(0xFF0A0E21),
         scaffoldBackgroundColor: const Color(0xFF0A0E21),
       ),
-      home: InputPage(),
+      home: LoginScreen(),
     );
   }
 }
